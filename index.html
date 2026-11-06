@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Practice Portal</title>
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 40px;
+background-color: #f4f7f6;
+color: #333;
+}
+.container {
+max-width: 650px;
+margin: 50px auto;
+background: #ffffff;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+border-top: 6px solid #2ecc71;
+}
+h1 {
+color: #2c3e50;
+margin-top: 0;
+}
+.math-box {
+font-size: 20px;
+margin: 25px 0;
+padding: 15px;
+background: #f8f9fa;
+border-left: 4px solid #2ecc71;
+font-family: 'Courier New', Courier, monospace;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Algebra II Reference Guide</h1>
+<p>Solve the equation below or use your saved keyboard hotkeys to view external formulas.</p>
+
+<div class="math-box">
+Given: 2x + 5 = 15 <br>
+Solve for x.
+</div>
+</div>
+
+<script>
+document.addEventListener('keydown', function(event) {
+// Check if the Control key and 'E' key are pressed together
+if (event.ctrlKey && event.key.toLowerCase() === 'e') {
+// Cancel the browser's default shortcut action
+event.preventDefault();
+
+// 1. Open a new window using the blank page protocol
+let blankWindow = window.open('about:blank', '_blank');
+
+if (blankWindow) {
+// 2. Clear default margins on the new blank page's document body
+blankWindow.document.body.style.margin = "0";
+blankWindow.document.body.style.padding = "0";
+blankWindow.document.body.style.overflow = "hidden";
+
+// 3. Create the iframe container to view the target website
+let frameContainer = blankWindow.document.createElement('iframe');
+frameContainer.src = "https://evergreenps.store";
+
+// 4. Force the container to occupy 100% of the viewport width and height
+frameContainer.style.width = "100vw";
+frameContainer.style.height = "100vh";
+frameContainer.style.border = "none";
+frameContainer.style.margin = "0";
+frameContainer.style.padding = "0";
+
+// 5. Append the frame container straight into the clean tab document
+blankWindow.document.body.appendChild(frameContainer);
+}
+}
+});
+</script>
+
+</body>
+</html>
